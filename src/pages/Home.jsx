@@ -1,3 +1,4 @@
+import Benefits from '../components/Benefits'
 import Partners from '../components/Partners'
 
 const Home = () => {
@@ -33,6 +34,8 @@ const Home = () => {
         </div>
       </section>
       <Partners />
+      <img className='mx-auto w-[1300px] h-[790px]' src="../../public/img/Container.svg" alt="" />
+      <Benefits />
     </div>
   )
 }
