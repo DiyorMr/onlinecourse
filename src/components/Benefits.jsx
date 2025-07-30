@@ -1,3 +1,5 @@
+import { ArrowUpRight } from "lucide-react";
+
 const benefits = [
     {
         id: "01",
@@ -56,7 +58,6 @@ export default function Benefits() {
                 >
                     View All
                 </a>
-
             </div>
 
             {/* Cards Grid */}
@@ -69,18 +70,23 @@ export default function Benefits() {
                         <div className="text-4xl font-bold text-gray-800 absolute top-5 right-5">
                             {item.id}
                         </div>
+
                         <h3 className="text-base font-semibold text-gray-900 mt-12">
                             {item.title}
                         </h3>
-                        <p className="text-sm text-gray-600 mt-2">{item.description}</p>
-                        <div className="mt-6">
-                            <button className="w-9 h-9  rounded-lg flex items-center justify-center hover:bg-gray-100 transition">
-                                <span className="text-orange-500 size-9 text-lg">↗</span>
-                            </button>
-                        </div>
+
+                        <p className="text-sm text-gray-600 mb-16">{item.description}</p>
+
+                        <a
+                            href="#"
+                            className="absolute bottom-5 right-5 text-orange-500 size-9 text-lg flex items-center justify-center hover:bg-gray-100 rounded-lg transition"
+                        >
+                            <ArrowUpRight className="size-8" />
+                        </a>
                     </div>
                 ))}
             </div>
+
         </section>
     );
 }
