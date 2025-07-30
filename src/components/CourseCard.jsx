@@ -11,8 +11,7 @@ const courses = [
         duration: "4 Weeks",
         level: "Beginner",
         author: "John Smith",
-        description:
-            "Learn the basics of web design: HTML, CSS, and responsive layouts. Great for beginners.",
+        description: "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills to create visually appealing and user-friendly websites.",
         image: webDesign,
     },
     {
@@ -20,8 +19,7 @@ const courses = [
         duration: "6 Weeks",
         level: "Intermediate",
         author: "Emily Johnson",
-        description:
-            "Learn how to create user-friendly interfaces with UI/UX design principles like wireframing and testing.",
+        description: "Master the art of creating intuitive user interfaces (UI) and enhancing user experiences (UX). Learn design principles, wireframing, prototyping, and usability testing techniques.",
         image: uiuxDesign,
     },
     {
@@ -29,8 +27,7 @@ const courses = [
         duration: "8 Weeks",
         level: "Intermediate",
         author: "David Brown",
-        description:
-            "Learn how to build Android & iOS apps using real projects and modern tools.",
+        description: "Dive into the world of mobile app development. Learn to build native iOS and Android applications using industry-leading frameworks like Swift and Kotlin.",
         image: mobileApp,
     },
     {
@@ -38,8 +35,7 @@ const courses = [
         duration: "10 Weeks",
         level: "Beginner",
         author: "Sarah Thompson",
-        description:
-            "Understand the basics of graphic design: typography, color theory, branding, and more.",
+        description: "Discover the fundamentals of graphic design, including typography, color theory, layout design, and image manipulation techniques. Create visually stunning designs for print and digital media.",
         image: graphicDesign,
     },
     {
@@ -47,8 +43,7 @@ const courses = [
         duration: "10 Weeks",
         level: "Intermediate",
         author: "Michael Adams",
-        description:
-            "Build websites using HTML, CSS, JavaScript, and front-end frameworks.",
+        description: "Become proficient in front-end web development. Learn HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React. Build interactive and responsive websites.",
         image: frontendDev,
     },
     {
@@ -56,15 +51,13 @@ const courses = [
         duration: "8 Weeks",
         level: "Advanced",
         author: "Jennifer Wilson",
-        description:
-            "Take your JavaScript skills further with ES6+, async/await, closures, and more.",
+        description: "Take your JavaScript skills to the next level. Explore advanced concepts like closures, prototypes, asynchronous programming, and ES6 features. Build complex applications with confidence.",
         image: advancedJs,
     },
 ];
 
-// Bitta kurs kartasi
 const CourseCard = ({ course }) => (
-    <div className="bg-white rounded-xl shadow p-4 flex flex-col">
+    <div className="bg-white rounded-xl w-full shadow p-4 flex flex-col">
         <img
             src={course.image}
             alt={course.title}
@@ -76,15 +69,14 @@ const CourseCard = ({ course }) => (
         <h2 className="text-lg font-semibold mb-2">{course.title}</h2>
         <p className="text-sm text-gray-700 flex-grow">{course.description}</p>
         <div className="mt-4 text-sm text-gray-600 font-medium">By {course.author}</div>
-        <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 w-fit self-start">
+        <a href="#" className="mx-auto flex items-center justify-center mt-4 px-4 py-2 w-full bg-gray-200 rounded cursor-pointer font-semibold">
             Get it Now
-        </button>
+        </a>
     </div>
 );
 
-// Kurslar grid holatda chiqariladi
 const CourseGrid = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
         {courses.map((course, index) => (
             <CourseCard key={index} course={course} />
         ))}
