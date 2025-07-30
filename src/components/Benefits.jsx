@@ -41,7 +41,7 @@ const benefits = [
 
 export default function Benefits() {
     return (
-        <section className="bg-gray-50 px-6 py-12 md:px-12 lg:px-20">
+        <section className="bg-gray-50 my-12">
             {/* Header */}
             <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
                 <div>
