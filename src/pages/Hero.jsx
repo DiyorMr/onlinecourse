@@ -34,7 +34,17 @@ const Hero = () => {
         </div>
       </section>
       <Partners />
-      <img className='mx-auto w-[1300px] h-[790px]' src="../../public/img/Container.svg" alt="" />
+      <div className="w-full max-w-[1300px] my-20 aspect-video mx-auto rounded-lg overflow-hidden shadow-lg">
+        <iframe
+          className="w-full h-full"
+          src="https://www.youtube.com/embed/2ePf9rue1Ao"
+          title="Online Course Introduction"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
       <Benefits />
     </div>
   )
