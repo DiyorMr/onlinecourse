@@ -3,7 +3,7 @@ import PricingPlans from '../components/PricingPlans'
 
 const Pricing = () => {
   return (
-    <div>
+    <div id='pricing'>
       <PricingPlans />
       <FaqSection />
     </div>

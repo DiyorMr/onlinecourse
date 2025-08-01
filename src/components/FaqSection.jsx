@@ -36,7 +36,7 @@ const FAQSection = () => {
     };
 
     return (
-        <section className="max-w-6xl mx-auto px-4 py-12">
+        <section className="max-w-full mx-auto py-16 my-40 p-8 bg-white">
             <div className="flex flex-col lg:flex-row lg:items-start gap-12">
                 <div className="lg:w-1/2">
                     <h2 className="text-4xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -44,7 +44,7 @@ const FAQSection = () => {
                         Still have any questions? Contact our team via
                         <a href="mailto:support@skillbridge.com" className="text-blue-500 hover:underline"> support@skillbridge.com</a>
                     </p>
-                    <button className="mt-2 px-5 py-2 text-sm border border-blue-500 text-blue-500 rounded hover:bg-blue-50 transition">
+                    <button className="mt-2 px-5 py-2 text-sm  rounded bg-blue-50 transition">
                         See All FAQ's
                     </button>
                 </div>
@@ -60,7 +60,7 @@ const FAQSection = () => {
                                 className="w-full flex justify-between items-center p-5 text-left font-semibold text-gray-800 hover:bg-gray-50"
                             >
                                 {faq.question}
-                                <span className="text-xl">{openIndex === index ? "−" : "+"}</span>
+                                <span className="text-xl">{openIndex === index ? "-" : "+"}</span>
                             </button>
                             {openIndex === index && (
                                 <div className="px-5 pb-5 text-gray-600 text-sm">

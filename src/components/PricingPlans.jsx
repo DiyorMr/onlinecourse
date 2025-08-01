@@ -35,8 +35,8 @@ const PricingPlans = () => {
     const [billing, setBilling] = useState("monthly");
 
     return (
-        <section className="p-6 bg-gray-50">
-            <div className="max-w-6xl">
+        <section className="bg-gray-50">
+            <div className="max-full">
                 <div className="flex items-center justify-between">
                     <div>
                         <h2 className="text-3xl font-bold">Our Pricing</h2>

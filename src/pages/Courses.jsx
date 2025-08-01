@@ -2,7 +2,7 @@ import CourseGrid from "../components/CourseCard"
 
 const Courses = () => {
   return (
-    <div>
+    <div id="courses">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
         <div>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">Our Courses</h2>

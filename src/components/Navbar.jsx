@@ -1,11 +1,18 @@
 import { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
+    const navItems = [
+        { href: "#home", label: "Home" },
+        { href: "#courses", label: "Courses" },
+        { href: "#about", label: "About Us" },
+        { href: "#pricing", label: "Pricing" },
+        { href: "#contact", label: "Contact" },
+    ];
+
     return (
-        <nav className="shadow bg-white px-6 md:px-32 py-4">
+        <nav className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur shadow transition-all duration-300 px-6 md:px-32 py-4">
             <div className="flex justify-between items-center">
                 {/* Logo */}
                 <a href="/">
@@ -44,70 +51,59 @@ export default function Navbar() {
 
                 {/* Desktop nav */}
                 <ul className="hidden md:flex gap-6 text-gray-700 font-medium">
-                    {["/", "/courses", "/about", "/pricing", "/contact"].map((path, idx) => {
-                        const labels = ["Home", "Courses", "About Us", "Pricing", "Contact"];
-                        return (
-                            <li key={path}>
-                                <NavLink
-                                    to={path}
-                                    className={({ isActive }) =>
-                                        isActive ? "text-orange-500 font-semibold" : "hover:text-orange-400"
-                                    }
-                                >
-                                    {labels[idx]}
-                                </NavLink>
-                            </li>
-                        );
-                    })}
+                    {navItems.map(({ href, label }) => (
+                        <li key={href}>
+                            <a
+                                href={href}
+                                className="hover:text-orange-400 transition-colors duration-200"
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
 
                 {/* Desktop auth */}
                 <div className="hidden md:flex items-center gap-4">
-                    <Link to="/signup" className="text-gray-700 hover:underline">
+                    <a href="#signup" className="text-gray-700 hover:underline">
                         Sign Up
-                    </Link>
-                    <Link
-                        to="/login"
+                    </a>
+                    <a
+                        href="#login"
                         className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
                     >
                         Login
-                    </Link>
+                    </a>
                 </div>
             </div>
 
             {/* Mobile menu */}
             {isOpen && (
                 <div className="md:hidden mt-4 space-y-3 text-gray-700 font-medium">
-                    {["/", "/courses", "/about", "/pricing", "/contact"].map((path, idx) => {
-                        const labels = ["Home", "Courses", "About Us", "Pricing", "Contact"];
-                        return (
-                            <NavLink
-                                key={path}
-                                to={path}
-                                className={({ isActive }) =>
-                                    isActive ? "block text-orange-500 font-semibold" : "block hover:text-orange-400"
-                                }
-                                onClick={() => setIsOpen(false)}
-                            >
-                                {labels[idx]}
-                            </NavLink>
-                        );
-                    })}
-
-                    <Link
-                        to="/signup"
+                    {navItems.map(({ href, label }) => (
+                        <a
+                            key={href}
+                            href={href}
+                            className="block hover:text-orange-400"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {label}
+                        </a>
+                    ))}
+                    <a
+                        href="#signup"
                         className="block hover:underline"
                         onClick={() => setIsOpen(false)}
                     >
                         Sign Up
-                    </Link>
-                    <Link
-                        to="/login"
+                    </a>
+                    <a
+                        href="#login"
                         className="block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
                         onClick={() => setIsOpen(false)}
                     >
                         Login
-                    </Link>
+                    </a>
                 </div>
             )}
         </nav>

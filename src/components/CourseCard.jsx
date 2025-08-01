@@ -57,11 +57,11 @@ const courses = [
 ];
 
 const CourseCard = ({ course }) => (
-    <div className="bg-white rounded-xl w-full shadow p-4 flex flex-col">
+    <div className="bg-white w-full shadow p-3 flex flex-col gap-2">
         <img
             src={course.image}
             alt={course.title}
-            className="w-full h-48 object-cover rounded-lg mb-4"
+            className="w-full h-full object-cover rounded-lg mb-4"
         />
         <div className="text-sm text-gray-500 mb-1">
             {course.duration} • {course.level}
@@ -69,14 +69,14 @@ const CourseCard = ({ course }) => (
         <h2 className="text-lg font-semibold mb-2">{course.title}</h2>
         <p className="text-sm text-gray-700 flex-grow">{course.description}</p>
         <div className="mt-4 text-sm text-gray-600 font-medium">By {course.author}</div>
-        <a href="#" className="mx-auto flex items-center justify-center mt-4 px-4 py-2 w-full bg-gray-200 rounded cursor-pointer font-semibold">
+        <a href="#" className="mx-auto flex items-center justify-center mt-4 px-4 py-2 mb-2 w-full bg-gray-200 rounded cursor-pointer font-semibold">
             Get it Now
         </a>
     </div>
 );
 
 const CourseGrid = () => (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 p-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
         {courses.map((course, index) => (
             <CourseCard key={index} course={course} />
         ))}
