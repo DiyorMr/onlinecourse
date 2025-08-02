@@ -1,5 +1,5 @@
 import About from "./About"
-import Contact from "./Contact"
+import Contact from "../components/Contact"
 import Courses from "./Courses"
 import Hero from "./Hero"
 import Pricing from "./Pricing"
