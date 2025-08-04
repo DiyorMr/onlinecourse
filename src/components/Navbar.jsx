@@ -15,37 +15,40 @@ export default function Navbar() {
 
     return (
         <nav className="bg-white shadow-md fixed top-0 left-0 w-full z-50 px-6 md:px-20 py-4">
-            <div className="flex justify-between items-center">
-                <Link to="/">
-                    <img src="/img/Logo.svg" alt="Logo" className="h-8 w-auto" />
-                </Link>
-
-                {/* Desktop */}
-                <div className="hidden md:flex items-center gap-8">
-                    <ul className="flex gap-6 text-gray-700 font-medium">
-                        {navItems.map((item) => (
-                            <li key={item.href}>
-                                <Link to={item.href} className="hover:text-orange-500">
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-                    <div className="flex gap-4">
-                        <Link to="/signup" className="text-gray-700 hover:underline">
-                            Sign Up
-                        </Link>
-                        <Link
-                            to="/login"
-                            className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
-                        >
-                            Login
-                        </Link>
-                    </div>
+            <div className="relative flex items-center justify-center">
+                {/* Logo - Left Side */}
+                <div className="absolute left-0">
+                    <Link to="/">
+                        <img src="/img/Logo.svg" alt="Logo" className="h-8 w-auto" />
+                    </Link>
                 </div>
 
-                {/* Mobile */}
-                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden">
+                {/* Nav items - Center */}
+                <ul className="hidden md:flex gap-8 text-gray-700 font-medium">
+                    {navItems.map((item) => (
+                        <li key={item.href}>
+                            <Link to={item.href} className="hover:text-orange-500 transition">
+                                {item.label}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+
+                {/* Buttons - Right Side */}
+                <div className="absolute right-0 hidden md:flex items-center gap-4">
+                    <Link to="/signup" className="text-gray-700 hover:underline">
+                        Sign Up
+                    </Link>
+                    <Link
+                        to="/login"
+                        className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600"
+                    >
+                        Login
+                    </Link>
+                </div>
+
+                {/* Mobile menu icon */}
+                <button onClick={() => setIsOpen(!isOpen)} className="md:hidden absolute right-0">
                     {isOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
