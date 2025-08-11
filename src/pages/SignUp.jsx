@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +24,7 @@ export default function SignUp() {
 
           {/* Email */}
           <div>
-            <label className="text-sm font-medium text-gray-700">Email</label>
+            <label className="text-sm font-medium text-gray-700">E-mail</label>
             <input
               type="email"
               placeholder="Enter your Email"

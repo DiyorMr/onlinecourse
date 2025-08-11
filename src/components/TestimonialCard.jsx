@@ -9,7 +9,7 @@ const testimonials = [
         name: "Jason M",
         image: "/img/about/jason.svg",
         story:
-            "The UI/UX design course exceeded my expectations. The instructor’s expertise and practical assignments helped me improve my design skills. I feel more confident in my career now. Thank you!",
+            "The UI/UX design course exceeded my expectations. The instructor's expertise and practical assignments helped me improve my design skills. I feel more confident in my career now. Thank you!",
     },
     {
         name: "Emily R",
