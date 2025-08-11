@@ -1,5 +1,4 @@
 import About from "./About"
-import Contact from "../components/Contact"
 import Courses from "./Courses"
 import Hero from "./Hero"
 import Pricing from "./Pricing"
@@ -11,7 +10,6 @@ const Home = () => {
       <Courses />
       <About />
       <Pricing />
-      <Contact />
     </div>
   )
 }

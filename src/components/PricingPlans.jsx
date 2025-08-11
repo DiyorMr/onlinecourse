@@ -44,8 +44,6 @@ const PricingPlans = () => {
                             Lorem ipsum dolor sit amet consectetur. Tempus tincidunt etiam eget elit id imperdiet et. Cras eu sit dignissim lorem nibh et. Ac cum eget habitasse in velit fringilla feugiat senectus in.
                         </p>
                     </div>
-
-
                     {/* Billing toggle */}
                     <div className="flex justify-center mt-4 space-x-2">
                         <button
